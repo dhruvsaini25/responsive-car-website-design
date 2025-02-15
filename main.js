@@ -1,8 +1,7 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const navMenu = document.getElementById("nav-menu"),
-          navToggle = document.getElementById("nav-toggle"),
-          navClose = document.getElementById("nav-close");
+        navToggle = document.getElementById("nav-toggle"),
+        navClose = document.getElementById("nav-close");
 
     if (navToggle) {
         navToggle.addEventListener("click", () => {
@@ -27,4 +26,3 @@ const linkAction = () =>{
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-8:05

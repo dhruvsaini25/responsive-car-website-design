@@ -1,22 +1,23 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@100..900&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
+/* VARIABLES CSS*/
 :root {
   --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
+  /* colors */
   --orange-color: hsl(36, 90%, 54%);
   --green-color: hsl(166, 90%, 40%);
   --blue-color: hsl(204, 90%, 50%);
   --white-color: hsl(0, 0%, 100%);
-  --black-color: hsl(210, 8%, 8%);
-  --red-color: hsl(338, 71%, 34%);
+  --black-color: hsl(0, 0%, 4%);
+  --red-color: hsl(330, 84%, 34%);
   --turquoise-color: hsl(182, 57%, 78%);
+  --pink-color: hsl(336, 71%, 58%);
+  --purple-color: hsl(273, 59%, 27%);
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
+  /* font */
+  /*0.5rem = 8px | 1rem = 16px */
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
   --biggest-font-size: 5rem;
@@ -24,17 +25,17 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
 
-  /*========== Font weight ==========*/
+  /* font weight */
   --font-regular: 400;
   --font-semi-bold: 600;
   --font-bold: 700;
 
-  /*========== z index ==========*/
+  /* z index */
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
-/*========== Responsive typography ==========*/
+/* responsive typography */
 @media screen and (min-width: 1150px) {
   :root {
     --biggest-font-size: 15rem;
@@ -44,7 +45,7 @@
   }
 }
 
-/*=============== BASE ===============*/
+/* BASE */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -71,7 +72,7 @@ img {
   height: auto;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/*resuable css class*/
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -81,16 +82,19 @@ img {
   overflow: hidden;
 }
 
-.car__orange {
-  --color-car: var(--orange-color);
+.car__black {
+  --color-car: var(--black-color);
 }
 
-.car__green {
-  --color-car: var(--green-color);
+.car__red {
+  --color-car: var(--red-color);
 }
 
-.car__blue {
-  --color-car: var(--blue-color);
+.car__turquoise {
+  --color-car: var(--purple-color);
+}
+.car__pink {
+  --color-car: var(--pink-color);
 }
 
 
@@ -101,7 +105,7 @@ img {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: var(--black-color);
+    background-color: transparent;
     z-index: var(--z-fixed);
 }
 
@@ -158,8 +162,135 @@ img {
     right: 1.5rem;
 }
 
-
 /* menu */
 .show-menu{
     right: 0;
 }
+
+/* home */
+.home__article{
+  position: relative;
+  padding-top: 12rem;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-color);
+
+}
+.home__panel-1{
+  width: 100%;
+  height: 40%;
+  background-color: var(--black-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.home__panel-2{
+  width: 100%;
+  height: 60%;
+  background-color: var(--color-car); /*black color*/
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.home__content{
+  position: relative;
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+  z-index: 1;
+}
+
+.home__data{
+  position: relative;
+}
+
+.home__titles{
+  width: max-content;
+  margin-inline: auto;
+
+}
+
+.home__subtitle{
+  font-size: var(--big-font-size);
+  font-family: var(--second-font);
+
+}
+.home__title{
+  font-size: var(--biggest-font-size);
+}
+.home__img{
+  max-width: initial;
+  width: 400px;
+  position: absolute;
+  left: 0;
+  bottom: -7.5rem;
+
+}
+
+.home__info{
+  padding-bottom: 3rem;
+  text-align: center;
+  display: grid;
+  row-gap: 2rem;
+
+}
+
+.home__specs{
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--color-car);
+}
+
+.home__button{
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  border: 2px solid var(--color-car);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4rem;
+  color: var(--color-car);
+}
+
+.home__button span{
+  font-weight: var(--font-semi-bold);
+}
+.home__button i{
+  font-size: 1.5rem;
+  transition: transform 0.4s;
+}
+.home__button:hover i{
+  transform: translateX(0.5rem);
+}
+.home__interaction{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.home__social{
+  position: absolute;
+  top: 4rem;
+  left: 1.5rem;
+  display:grid;
+  justify-items: center;
+  row-gap: 0.75rem;
+  z-index: 10;
+} 
+.home__social-link{
+  font-size: 1.25rem;
+  color: var(--white-color);
+}
+.home__social-border{
+  width: 2px;
+  height: 88px;
+  background-color: var(--white-color);
+  margin-bottom: 0.75rem;
+}
+
+/* 17:12 */
