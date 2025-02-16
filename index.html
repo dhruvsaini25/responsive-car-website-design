@@ -64,11 +64,11 @@
     <main class="main">
         <!-- home -->
         <section class="home">
-            <div class="home__swiper">
-                <div>
+            <div class="home__swiper swiper">
+                <div class="swiper-wrapper">
                     <!-- BLACK CAR -->
-                    <div class="black-car">
-                    <article class="home__article car__black">
+                    <!-- <div class="black-car"> -->    <!--- earlier used to change color to white from color car black-->
+                    <article class="home__article car__black swiper-slide">
                         
                         <div class="home__panel-1"></div>
                         <div class="home__panel-2"></div>
@@ -101,10 +101,10 @@
                         
                         </div>
                     </article>
-                    </div>
+                    <!-- </div> -->
 
                     <!-- RED CAR -->
-                    <article class="home__article car__red">
+                    <article class="home__article car__red swiper-slide">
                         <div class="home__panel-1"></div>
                         <div class="home__panel-2"></div>
 
@@ -136,8 +136,8 @@
                         </div>
                     </article>
 
-                    <!-- TURQUOISE CAR -->
-                    <article class="home__article car__turquoise">
+                    <!-- PURPLE CAR -->
+                    <article class="home__article car__turquoise swiper-slide">
                         <div class="home__panel-1"></div>
                         <div class="home__panel-2"></div>
 
@@ -170,7 +170,7 @@
                     </article>
 
                     <!-- PINK CAR -->
-                    <article class="home__article car__pink">
+                    <article class="home__article car__pink swiper-slide">
                         <div class="home__panel-1"></div>
                         <div class="home__panel-2"></div>
 
@@ -220,7 +220,8 @@
                         <i class="ri-twitter-x-line"></i>
                     </a>
                 </div>
-
+                <!-- pagination -->
+                <div class="swiper-pagination"></div>
             </div>
 
         </section>
@@ -228,8 +229,8 @@
     <!-- gsap -->
     <script src=""></script>
 
-    <!-- swiper -->
-    <script src=""></script>
+    <!-- swiper js-->
+    <script src="swiper-bundle.min.js"></script>
 
     <!-- main js -->
     <script src="main.js" ></script>

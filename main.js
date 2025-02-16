@@ -26,3 +26,35 @@ const linkAction = () =>{
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+// swiper car
+const swiperHome = new Swiper('.home__swiper', {
+
+    speed: 1200,
+    effect: 'fade',
+    // loop: true,
+
+    // pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: (index, className) => {
+            return '<span class="' + className + '">' + String(index + 1).padStart(2, '0') + "</span>";
+        },
+    },
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    //     renderBullet: (index, className) => {
+    //         return `<span class="${className}">${index + 1}</span>`;
+    //     },
+    // },
+});
+
+//blur header
+const blurHeader = () =>{
+    const header = document.getElementById('header')
+    // Add a class if the bottom offset is greater than 50 of the viewport
+    this.scrollY >= 50 ? header.classList.add('blur-header')
+                    : header.classList.remove('blur-header')
+}
+window.addEventListener('scroll', blurHeader)
