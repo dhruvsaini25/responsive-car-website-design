@@ -96,6 +96,19 @@ img {
 .car__pink {
   --color-car: var(--pink-color);
 }
+.black-car .home__info,
+.black-car .home__info * {
+    color: white !important;
+}
+.black-car .home__button {
+  color: white !important;  /* Text color */
+  border-color: white !important;  /* Border color */
+}
+
+.black-car .home__button i {
+  color: white !important;  /* Icon color (if applicable) */
+}
+
 
 
 
@@ -176,6 +189,7 @@ img {
   background-color: var(--black-color);
 
 }
+
 .home__panel-1{
   width: 100%;
   height: 40%;
@@ -235,6 +249,11 @@ img {
   row-gap: 2rem;
 
 }
+.black-car .home__info {
+  color: white !important; /* Force override */
+}
+
+
 
 .home__specs{
   display: flex;
