@@ -7,7 +7,7 @@
 
   /* colors */
   --orange-color: hsl(36, 90%, 54%);
-  --green-color: hsl(166, 90%, 40%);
+  --green-color: hsl(130, 65%, 62%);
   --blue-color: hsl(204, 90%, 50%);
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 4%);
@@ -82,8 +82,8 @@ img {
   overflow: hidden;
 }
 
-.car__black {
-  --color-car: var(--black-color);
+.car__green {
+  --color-car: var(--green-color);
 }
 
 .car__red {
@@ -488,4 +488,28 @@ img {
 }
 
 /* taller devices */
-/* 3039 */
+@media screen and (max-width: 1150px) and (min-height: 800px) {
+  .home__content{
+    align-content: space-around;
+    row-gap: 3rem;
+  }
+}
+@media screen and (min-width: 1150px) and (min-height: 800px) {
+  .home__article{
+    padding-top: 7rem;
+  }
+  .home__info{
+    padding-bottom: 3rem;
+  }
+  .home__social{
+    bottom: 4.5rem;
+  }
+}
+@media screen and (min-width: 1150px) and (min-height: 1000px) {
+  .swiper,
+  .home__article,
+  .home__interaction{
+    height: 900px;
+
+  }
+}
